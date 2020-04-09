@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/accountMananger"
-            android:icon="@drawable/account_manager"
-            android:title="账户管理" />
-        <item
-            android:id="@+id/carManager"
-            android:icon="@drawable/car_manager"
-            android:title="车辆管理" />
-        <item
-            android:id="@+id/settings"
-            android:icon="@drawable/settings"
-            android:title="设置" />
-    </group>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/Messages"
+        android:icon="@drawable/bells"
+        android:title="消息"
+        app:showAsAction="always" />
 </menu>
