@@ -1,7 +1,5 @@
 package com.czb.ccparkinglot;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;

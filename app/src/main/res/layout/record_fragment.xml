@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/record_fragment_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/record_fragment_imageview_car_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/lamborghini"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#6FB5B5B5"
+        app:layout_constraintBottom_toTopOf="@+id/record_fragment_textview_parkinglot_name"
+        app:layout_constraintTop_toBottomOf="@+id/record_fragment_textview_car_name" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#6FB5B5B5"
+        app:layout_constraintBottom_toTopOf="@+id/record_fragment_textview_start_time"
+        app:layout_constraintTop_toBottomOf="@+id/record_fragment_textview_parkinglot_name" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#6FB5B5B5"
+        app:layout_constraintBottom_toTopOf="@+id/record_fragment_textview_end_time"
+        app:layout_constraintTop_toBottomOf="@+id/record_fragment_textview_start_time" />
+
+    <TextView
+        android:id="@+id/record_fragment_textview_car_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="兰博基尼AVENTADOR S（黑色）"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/record_fragment_imageview_car_icon"
+        app:layout_constraintTop_toTopOf="@+id/record_fragment_imageview_car_icon" />
+
+    <ImageView
+        android:id="@+id/record_fragment_imageview_parkinglot_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/map"
+        app:layout_constraintStart_toStartOf="@+id/record_fragment_imageview_car_icon"
+        app:layout_constraintTop_toBottomOf="@+id/record_fragment_imageview_car_icon" />
+
+    <TextView
+        android:id="@+id/record_fragment_textview_parkinglot_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:text="迪拜停车场"
+        app:layout_constraintStart_toEndOf="@+id/record_fragment_imageview_parkinglot_icon"
+        app:layout_constraintTop_toBottomOf="@+id/record_fragment_textview_car_name" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical|right"
+        android:text="开始："
+        app:layout_constraintStart_toStartOf="@+id/record_fragment_imageview_parkinglot_icon"
+        app:layout_constraintTop_toBottomOf="@+id/record_fragment_imageview_parkinglot_icon" />
+
+    <TextView
+        android:id="@+id/record_fragment_textview_start_time"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/record_fragment_textview_parkinglot_name" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical|right"
+        android:text="结束："
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/record_fragment_textview_end_time"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/record_fragment_textview_start_time" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

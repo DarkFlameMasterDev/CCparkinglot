@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/account"
+        android:icon="@drawable/account"
+        android:title="账户" />
+    <item
+        android:id="@+id/cars"
+        android:icon="@drawable/cars"
+        android:title="车辆管理" />
+
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/settings"
+        android:title="设置" />
+</menu>

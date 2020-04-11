@@ -14,6 +14,7 @@
             android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            android:background="#fff"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -49,12 +50,11 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+
         <Button
-            android:id="@+id/activity_main_button_scan"
+            android:id="@+id/activity_main_button_createQrCode"
             android:layout_width="200dp"
             android:layout_height="48dp"
             android:layout_marginBottom="50dp"
@@ -64,20 +64,22 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
+            android:id="@+id/activity_main_button_record"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/record_view"
-            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="54dp"
+            android:background="@drawable/record_view"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
+        android:id="@+id/activity_main_navigationview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header"
-        app:menu="@menu/toolbar" />
+        app:menu="@menu/nav_menu"
+        android:theme="@style/navigationView_Theme"/>
 </androidx.drawerlayout.widget.DrawerLayout>
