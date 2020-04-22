@@ -1,12 +1,12 @@
 package com.czb.ccparkinglot.record;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.czb.ccparkinglot.R;
 
@@ -25,3 +25,4 @@ public class RecordActivity extends AppCompatActivity {
         getWindow().setStatusBarColor(Color.WHITE);
     }
 }
+ 

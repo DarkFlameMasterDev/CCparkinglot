@@ -2,55 +2,91 @@
 <androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/activity_main_mapview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
+        <Button
+            android:id="@+id/activity_main_button_search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/refresh"
+            app:layout_constraintBottom_toTopOf="@+id/activity_main_button_record"
+            app:layout_constraintEnd_toEndOf="@+id/activity_main_button_record"
+            app:layout_constraintStart_toStartOf="@+id/activity_main_button_record" />
+
+        <Button
+            android:id="@+id/activity_main_button_show_now_location"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/now_location"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_main_button_record"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/activity_main_button_record" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout3"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#fff"
-            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <Button
-                android:id="@+id/activity_main_button_account"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/accounts"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:layout_width="136dp"
-                android:layout_height="51dp"
-                android:background="@drawable/ccparkinglot_logo"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/activity_main_button_message"
-                app:layout_constraintStart_toEndOf="@+id/activity_main_button_account"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/activity_main_button_message"
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:layout_marginRight="23dp"
-                android:background="@drawable/bells"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#fff"
+                android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/activity_main_button_account"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/accounts"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="136dp"
+                    android:layout_height="51dp"
+                    android:background="@drawable/ccparkinglot_logo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/activity_main_button_message"
+                    app:layout_constraintStart_toEndOf="@+id/activity_main_button_account"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/activity_main_button_message"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginRight="23dp"
+                    android:background="@drawable/bells"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 
 
         <Button
@@ -76,10 +112,10 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/activity_main_navigationview"
-        android:layout_width="match_parent"
+        android:layout_width="220dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:theme="@style/navigationView_Theme"
         app:headerLayout="@layout/nav_header"
-        app:menu="@menu/nav_menu"
-        android:theme="@style/navigationView_Theme"/>
+        app:menu="@menu/nav_menu" />
 </androidx.drawerlayout.widget.DrawerLayout>

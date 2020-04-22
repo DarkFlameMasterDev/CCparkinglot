@@ -42,10 +42,11 @@ public class RecordListFragment extends Fragment {
 
     private List<RecordItem> init_recordItemList() {
         List<RecordItem> recordList = new ArrayList<>();
-        RecordItem recordItem = new RecordItem("兰博基尼", "迪拜停车场", "停车中",
-                                               new Date(2019, 12, 5, 10, 18),
-                                               null);
+        RecordItem recordItem;
         for (int i = 0; i < 50; i++) {
+            recordItem = new RecordItem("兰博基尼"+i, "迪拜停车场", "停车中",
+                                                   new Date(2019, 12, 5, 10, 18),
+                                                   null);
             recordList.add(recordItem);
         }
         return recordList;
