@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 
 import com.baidu.location.BDLocation;
@@ -63,6 +64,8 @@ public class PoiOverlay extends OverlayManager implements BaiduMap.OnMapClickLis
     private TextView mParkinglotTextInAlertDialog;
 
     private RoutePlanSearch mSearch;
+
+    AlertDialog.Builder alertdialogBuilder;
 
 
     RouteLine route = null;
@@ -175,18 +178,52 @@ public class PoiOverlay extends OverlayManager implements BaiduMap.OnMapClickLis
     public void showLocationContent(final Marker marker) {
 
         final View view = LayoutInflater.from(mContext).inflate(R.layout.alert_dialog_content, null, false);
+        final MyDialog myDialog = new MyDialog(mContext);
+        myDialog.create();
+        myDialog.setContentView(view);
         mGoButton = view.findViewById(R.id.alert_dialog_content_button_go_button);
         mGoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 searchButtonProcess(marker);
+                myDialog.dismiss();
             }
         });
         mParkinglotTextInAlertDialog = view.findViewById(R.id.alert_dialog_content_textview_parkinglot_name);
         mParkinglotTextInAlertDialog.setText(clickResult);
-        AlertDialog.Builder alertdialogBuilder = new AlertDialog.Builder(mContext);
-        alertdialogBuilder.setView(view);
-        alertdialogBuilder.show();
+//        alertdialogBuilder = new AlertDialog.Builder(mContext);
+//        alertdialogBuilder.setView(view);
+//        alertdialogBuilder.show();
+
+
+        myDialog.show();
+    }
+
+    public class MyDialog extends Dialog {
+
+        public MyDialog(@NonNull Context context) {
+            super(context);
+        }
+
+        @Override
+        public void dismiss() {
+            super.dismiss();
+        }
+
+        @Override
+        public void create() {
+            super.create();
+        }
+
+        @Override
+        public void setContentView(@NonNull View view) {
+            super.setContentView(view);
+        }
+
+        @Override
+        public void show() {
+            super.show();
+        }
     }
 
     public void searchButtonProcess(Marker marker) {
