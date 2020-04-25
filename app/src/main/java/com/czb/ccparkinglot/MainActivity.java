@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
                     mDrawerLayout.openDrawer(Gravity.LEFT);
                     break;
                 case R.id.activity_main_button_search:
-                    mPoiSearch.searchNearby(new PoiNearbySearchOption().location(mNowLatLng).radius(1000).keyword("酒店").pageNum(0));
+                    mPoiSearch.searchNearby(new PoiNearbySearchOption().location(mNowLatLng).radius(1000).keyword("停车场").pageNum(0));
                     break;
                 case R.id.activity_main_button_show_now_location:
                     showNowLocation(mCurrentLocation);
